@@ -1,0 +1,91 @@
+import { Offer } from '../types/offer';
+
+const AMSTERDAM = {
+  name: 'Amsterdam',
+  location: { latitude: 52.37454, longitude: 4.897976, zoom: 13 },
+};
+
+const COLOGNE = {
+  name: 'Cologne',
+  location: { latitude: 50.938361, longitude: 6.959974, zoom: 13 },
+};
+
+const DEFAULT_DESCRIPTION = [
+  'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam. The building is green and from 18th century.',
+  'An independent House, strategically located between Rembrand Square and National Opera, but where the bustle of the city comes to rest in this alley flowery and colorful.',
+];
+
+export const offers: Offer[] = [
+  {
+    id: '6af6f711-c28d-4121-82cd-e0b462a27f00',
+    title: 'Beautiful & luxurious studio at great location',
+    type: 'apartment',
+    price: 120,
+    city: AMSTERDAM,
+    location: { latitude: 52.3909553943508, longitude: 4.85309666406198, zoom: 8 },
+    isFavorite: false,
+    isPremium: true,
+    rating: 4.8,
+    previewImage: '/img/apartment-01.jpg',
+    images: ['/img/room.jpg', '/img/apartment-01.jpg', '/img/apartment-02.jpg', '/img/apartment-03.jpg', '/img/studio-01.jpg', '/img/apartment-01.jpg'],
+    description: DEFAULT_DESCRIPTION,
+    bedrooms: 3,
+    maxAdults: 4,
+    goods: ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Coffee machine', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV', 'Fridge'],
+    host: { name: 'Angelina', avatarUrl: '/img/avatar-angelina.jpg', isPro: true },
+  },
+  {
+    id: 'b1c2d3e4-1111-4a2b-9c3d-0a1b2c3d4e01',
+    title: 'Wood and stone place',
+    type: 'room',
+    price: 80,
+    city: AMSTERDAM,
+    location: { latitude: 52.3609553943508, longitude: 4.85309666406198, zoom: 8 },
+    isFavorite: true,
+    isPremium: false,
+    rating: 4,
+    previewImage: '/img/room.jpg',
+    images: ['/img/room.jpg', '/img/apartment-02.jpg', '/img/studio-01.jpg'],
+    description: [DEFAULT_DESCRIPTION[0]],
+    bedrooms: 1,
+    maxAdults: 2,
+    goods: ['Wi-Fi', 'Heating', 'Kitchen', 'Towels'],
+    host: { name: 'Max', avatarUrl: '/img/avatar-max.jpg', isPro: false },
+  },
+  {
+    id: 'b1c2d3e4-2222-4a2b-9c3d-0a1b2c3d4e02',
+    title: 'Canal View Prinsengracht',
+    type: 'apartment',
+    price: 132,
+    city: AMSTERDAM,
+    location: { latitude: 52.3909553943508, longitude: 4.929309666406198, zoom: 8 },
+    isFavorite: true,
+    isPremium: false,
+    rating: 4,
+    previewImage: '/img/apartment-02.jpg',
+    images: ['/img/apartment-02.jpg', '/img/apartment-01.jpg', '/img/apartment-03.jpg', '/img/room.jpg'],
+    description: DEFAULT_DESCRIPTION,
+    bedrooms: 2,
+    maxAdults: 3,
+    goods: ['Wi-Fi', 'Washing machine', 'Heating', 'Coffee machine', 'Kitchen', 'Fridge'],
+    host: { name: 'Angelina', avatarUrl: '/img/avatar-angelina.jpg', isPro: true },
+  },
+  {
+    id: 'b1c2d3e4-3333-4a2b-9c3d-0a1b2c3d4e03',
+    title: 'White castle',
+    type: 'house',
+    price: 180,
+    city: COLOGNE,
+    location: { latitude: 50.943361, longitude: 6.949974, zoom: 8 },
+    isFavorite: true,
+    isPremium: true,
+    rating: 5,
+    previewImage: '/img/apartment-03.jpg',
+    images: ['/img/apartment-03.jpg', '/img/apartment-01.jpg', '/img/studio-01.jpg', '/img/room.jpg', '/img/apartment-02.jpg'],
+    description: DEFAULT_DESCRIPTION,
+    bedrooms: 4,
+    maxAdults: 6,
+    goods: ['Wi-Fi', 'Washing machine', 'Towels', 'Heating', 'Baby seat', 'Kitchen', 'Dishwasher', 'Cabel TV'],
+    host: { name: 'Angelina', avatarUrl: '/img/avatar-angelina.jpg', isPro: true },
+  },
+];
