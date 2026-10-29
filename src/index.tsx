@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './app/app'; // Проверь путь, судя по структуре у тебя app/app.tsx
+import App from './app/app';
+import { offers } from './mocks/offers';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -8,6 +9,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App /> {/* Просто App, без пропсов */}
+    <App offers={offers} />
   </React.StrictMode>
 );
